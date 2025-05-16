@@ -1,0 +1,11 @@
+import numpy as np
+
+sample = np.genfromtxt('sample.csv', delimiter=' ')
+#print(sample)
+print(type(sample))
+print(np.shape(sample))
+
+
+%time print("MEAN:\t", np.mean(sample, axis=0))
+print("MEDIAN:\t", np.median(sample, axis=0))
+print("STD:\t", np.std(sample, axis=0))
