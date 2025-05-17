@@ -2,6 +2,8 @@ import pytest
 import json
 from typing import List, Union
 from homework import take_from_list, calculate
+import tempfile
+import os
 
 @pytest.mark.parametrize("li, indices, res", 
                         [([10,20,30],[1],[20]), 
@@ -19,3 +21,10 @@ def test_take_from_text():
 def test_take_from_out_of_range():
     with pytest.raises(IndexError):
         assert take_from_list([10,20,30], 5) == "anything"
+
+
+
+def test_calculate():
+    with tempfile.TemporaryDirectory() as tmpdir:
+        in_path = os.path.join(tmpdir, "input.json")
+        out_path = os.path.join(tmpdir, "output.json")
