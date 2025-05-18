@@ -7,10 +7,9 @@ import tempfile
 import os
 
 @pytest.mark.parametrize("li, indices, res", 
-                        [([10,20,30],[1],[20]), 
-                        ([10,20,30], 1 ,[20]), 
-                        ([10,20,30,40,50], [-1,-2], [50,40])]
-                        )
+                        [([10,20,30],        [1],    [20]), 
+                         ([10,20,30],         1 ,    [20]), 
+                         ([10,20,30,40,50], [-1,-2], [50,40])])
 def test_take_from_list(li: list, indices: Union[int, List[int]], res: list):
     assert take_from_list(li, indices) == res
 
@@ -51,4 +50,3 @@ def test_calculate():
 
 if __name__ == "__main__":
     test_calculate()
-    
