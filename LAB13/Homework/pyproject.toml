@@ -1,0 +1,14 @@
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+homework_exercise = ["data_file.json", "data_file_2.toml"]
+
+[project]
+name = "homework_exercise"
+version = "0.1.0"
+description = "Homework package"
+dependencies = [
+    "numpy",
+    "toml"
+]
