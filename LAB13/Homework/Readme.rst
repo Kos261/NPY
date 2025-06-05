@@ -19,9 +19,9 @@ To test if package is properly installable run ``test_package.py`` script, like 
      [0. 0. 0. 0. 0. 0. 0.]]
     fun2: 18             
 
-
-.. rm -rf dist/ build/ *.egg-info                                     delete dist
-.. python -m build --sdist                                            build package
-.. pip install dist/homework_exercise-0.1.0.tar.gz --force-reinstall  reinstall
-.. pytest                                                             testing 
-    
+```
+rm -rf dist/ build/ *.egg-info                                     #delete dist
+python -m build --sdist                                            #build package
+pip install dist/homework_exercise-0.1.0.tar.gz --force-reinstall  #reinstall
+pytest                                                             #testing 
+```
